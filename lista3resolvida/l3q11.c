@@ -1,50 +1,31 @@
 #include <stdio.h>
 
-
 /**
-@author Eduardo JosÃ©
+@author Eduardo José
 @version 1.0.0
 @since 13/09/19
 */
 
-
 int main(){
 
-int h1,h2,m1,m2,aux_mn,aux_mv,aux_hv, aux_hn;
+int hv,hn,mv,mn,aux;
 
-printf("Valor h1: ");
-scanf("%i", &h1);
+printf("Valores homens e mulheres: ");
+scanf("%i %i %i %i", &hv, &hn, &mv, &mn);
 
-printf("Valor h2: ");
-scanf("%i", &h2);
-
-printf("Valor m1: ");
-scanf("%i", &m1);
-
-printf("Valor m2: ");
-scanf("%i", &m2);
-
-if( m1 < m2){
-    aux_mn = m1;
-    aux_mv = m2;
+if( hv < hn){
+    aux = hv;
+    hv = hn;
+    hn = aux;
 }
-else{
-    aux_mv = m1;
-    aux_mn = m2;
+else if( mv < mn){
+    aux = mv;
+    mv = mn;
+    mn = aux;
 }
 
-if( h1 < h2){
-
-    aux_hn = h1;
-    aux_hv = h2;
-}
-else{
-    aux_hv = h1;
-    aux_hn = h2;
-}
-
-printf("Homem mais velho com mulher nova = %i \n", aux_hv + aux_mn);
-printf("Homem mais novo com mulher mais velha = %i", aux_hn * aux_mv);
+printf("Homem mais velho com mulher nova = %i \n", hn + mn);
+printf("Homem mais novo com mulher mais velha = %i", hv*mv);
 
 
 
