@@ -7,18 +7,21 @@
 */
 
 int main(){
-#define TAMANHO 20
+#define TAMANHO 30
 char str1[TAMANHO] = "Eduardo";
 char str2[TAMANHO] = "Eduardo";
 int contagem = 0;
+
+printf("Entre com os valores das strings: ");
+scanf("%s %s", &str1 , &str2);
 
 for(int i = 0 ; i < TAMANHO  ; i++ ){
 
     if(str1[i] == str2[i]){
         contagem++;
+
     }
 }
-printf("%d", contagem);
 if(contagem == TAMANHO){
     printf("As string sao iguais!");
 }
