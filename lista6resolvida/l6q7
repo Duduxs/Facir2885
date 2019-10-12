@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
 @author Eduardo José
@@ -8,26 +9,23 @@
 
 int main(){
 #define TAMANHO 30
-char str1[TAMANHO] = "Eduardo";
-char str2[TAMANHO] = "Eduardo";
-int contagem = 0;
+char str1[TAMANHO];
+char str2[TAMANHO];
+int i = 0;
 
 printf("Entre com os valores das strings: ");
 scanf("%s %s", &str1 , &str2);
 
-for(int i = 0 ; i < TAMANHO  ; i++ ){
+for(i = 0 ; str1[i] == str2[i] && str1[i] == '\0'; i++);
 
-    if(str1[i] == str2[i]){
-        contagem++;
-
-    }
+if(str1[i] < str2[i]){
+    printf("\nString 1 e maior!");
 }
-if(contagem == TAMANHO){
-    printf("As string sao iguais!");
+else if(str1[i] > str2[i]){
+    printf("\nString 2 e maior!");
 }
 else{
-    printf("String nao sao iguais!");
+    printf("\nString sao iguais!");
 }
-
 return 0;
 }
