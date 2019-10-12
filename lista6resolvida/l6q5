@@ -19,8 +19,5 @@ tamanho_da_string = strlen(str1);
 
 printf("Sua string tem %i letras", tamanho_da_string);
 
-
-
 return 0;
-
 }
