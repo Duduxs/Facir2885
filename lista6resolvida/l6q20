@@ -26,7 +26,7 @@ int main(){
     y = strlen(str2);
 
 
-//Primeira frase
+
     printf("\n--------------\n");
     printf("PRIMEIRA FRASE\n");
     printf("--------------\n");
