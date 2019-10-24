@@ -40,7 +40,7 @@ void acrescentar()
 void decrementar()
 {
 
-    if(topo >= 0)
+    if(topo > 0)
     {
         pilha[topo-1] = 0;
         topo--;
@@ -72,7 +72,7 @@ int main()
     {
 
         printf("1 - Adicionar\n");
-        printf("2 - Decrementara\n");
+        printf("2 - Decrementar\n");
         printf("3 - limpar a pilha\n");
         printf("4 - mostrar a pilha \n");
         printf("5 - Sair\n");
